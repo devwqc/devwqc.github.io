@@ -1,0 +1,17 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'a'>;
+
+const { href, class: className, ...props } = Astro.props;
+const { pathname } = Astro.url;
+const isActive = href === pathname;
+---
+
+<a
+  href={href}
+  class:list={[className, { 'text-emerald-600': isActive }, 'text-xl']}
+  {...props}
+>
+  <slot />
+</a>
