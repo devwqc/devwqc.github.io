@@ -1,4 +1,6 @@
 ---
+import '@/styles/global.css';
+
 const { title, description } = Astro.props;
 ---
 
@@ -13,7 +15,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <slot name="head" />
   </head>
-  <body class="max-w-[48rem] mx-auto my-0 min-h-screen">
+  <body>
     <slot />
   </body>
 </html>
