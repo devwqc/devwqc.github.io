@@ -1,0 +1,40 @@
+---
+import HeaderLink from '@/components/HeaderLink.astro';
+import { menu } from '@/constants/menu';
+import CloseSvg from './CloseSvg.astro';
+import HamburgerSvg from './HamburgerSvg.astro';
+---
+
+<button id="hamburger" class="sm:hidden" type="button">
+  <HamburgerSvg class="size-7" />
+</button>
+<ul id="mobileMenu" class="hidden p-5">
+  {
+    menu.map((item) => (
+      <li>
+        <HeaderLink href={item.path} class="block">
+          {item.label}
+        </HeaderLink>
+      </li>
+    ))
+  }
+  <button id="closeMenuBtn" type="button" class="absolute top-5 right-5">
+    <CloseSvg class="size-7" />
+  </button>
+</ul>
+
+<script>
+  document.querySelector('#hamburger')?.addEventListener('click', () => {
+    document.querySelector('#mobileMenu')?.classList.toggle('expanded');
+  });
+
+  document.querySelector('#closeMenuBtn')?.addEventListener('click', () => {
+    document.querySelector('#mobileMenu')?.classList.remove('expanded');
+  });
+</script>
+
+<style>
+  .expanded {
+    @apply bg-white fixed inset-0 flex flex-col gap-5;
+  }
+</style>
