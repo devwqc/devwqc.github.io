@@ -1,0 +1,14 @@
+---
+import HeaderLink from '@/components/HeaderLink.astro';
+import { menu } from '@/constants/menu';
+---
+
+<ul class="hidden sm:flex sm:gap-5">
+  {
+    menu.map((item) => (
+      <li>
+        <HeaderLink href={item.path}>{item.label}</HeaderLink>
+      </li>
+    ))
+  }
+</ul>
