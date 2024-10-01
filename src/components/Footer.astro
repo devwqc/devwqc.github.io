@@ -1,24 +1,31 @@
 ---
+import SnsIcon from './SnsIcon.astro';
+
 const today = new Date();
 ---
 
-<footer
-  class="fixed bottom-0 max-w-[48rem] w-full flex flex-col items-center gap-1"
->
+<footer class="flex flex-col items-center gap-1 py-10">
   &copy; {today.getFullYear()} devwqc All rights reserved.
   <ul class="flex gap-5">
     <li>
-      <a
-        href="https://github.com/devwqc"
+      <SnsIcon
+        href="mailto:devwqc@gmail.com"
         target="_blank"
-        rel="noreferrer noopener">GitHub</a
+        rel="noreferrer noopener">Mail</SnsIcon
       >
     </li>
     <li>
-      <a
+      <SnsIcon
+        href="https://github.com/devwqc"
+        target="_blank"
+        rel="noreferrer noopener">GitHub</SnsIcon
+      >
+    </li>
+    <li>
+      <SnsIcon
         href="https://www.linkedin.com/in/devwqc/"
         target="_blank"
-        rel="noreferrer noopener">LinkedIn</a
+        rel="noreferrer noopener">LinkedIn</SnsIcon
       >
     </li>
   </ul>

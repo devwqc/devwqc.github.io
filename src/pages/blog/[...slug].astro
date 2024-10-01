@@ -1,5 +1,5 @@
 ---
-import Header from '@/components/Header.astro';
+import FormattedDate from '@/components/FormattedDate.astro';
 import MarkDown from '@/components/Markdown.astro';
 import PageLayout from '@/layouts/PageLayout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
@@ -20,10 +20,10 @@ const { Content } = await post.render();
 ---
 
 <PageLayout title={post.data.title}>
-  <Header />
   <article>
-    <header>
-      <h1>{post.data.title}</h1>
+    <header class="border-b pb-10 text-center">
+      <h1 class="text-3xl font-bold">{post.data.title}</h1>
+      <FormattedDate datetime={post.data.publishedDate} class="text-gray-500" />
     </header>
     <MarkDown>
       <Content />
