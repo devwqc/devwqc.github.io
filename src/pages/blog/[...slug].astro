@@ -21,12 +21,29 @@ const { Content } = await post.render();
 
 <PageLayout title={post.data.title}>
   <article>
-    <header class="border-b pb-10 text-center">
-      <h1 class="text-3xl font-bold">{post.data.title}</h1>
-      <FormattedDate datetime={post.data.publishedDate} class="text-gray-500" />
+    <header class="border-b pb-10 text-center flex flex-col gap-3">
+      <h1 class="text-4xl font-bold">{post.data.title}</h1>
+      <p class="text-gray-500">
+        <span>
+          작성일:
+          <FormattedDate datetime={post.data.publishedDate} />
+        </span>
+        {
+          post.data.updatedDate && (
+            <span>
+              수정일:
+              <FormattedDate datetime={post.data.updatedDate} />
+            </span>
+          )
+        }
+      </p>
     </header>
     <MarkDown>
       <Content />
     </MarkDown>
+    <footer>
+      <p>방문해 주셔서 감사합니다.</p>
+      <p>오탈자, 잘못된 정보에 대해 말씀해 주시면 감사히 받겠습니다.</p>
+    </footer>
   </article>
 </PageLayout>
