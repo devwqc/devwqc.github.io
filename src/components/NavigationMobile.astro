@@ -8,7 +8,7 @@ import HamburgerSvg from './HamburgerSvg.astro';
 <button id="hamburger" class="sm:hidden" type="button">
   <HamburgerSvg class="size-7" />
 </button>
-<ul id="mobileMenu" class="hidden p-5">
+<ul id="mobileMenu" class="hidden px-5 py-10">
   {
     menu.map((item) => (
       <li>
@@ -18,7 +18,7 @@ import HamburgerSvg from './HamburgerSvg.astro';
       </li>
     ))
   }
-  <button id="closeMenuBtn" type="button" class="absolute top-5 right-5">
+  <button id="closeMenuBtn" type="button" class="absolute top-10 right-5">
     <CloseSvg class="size-7" />
   </button>
 </ul>
