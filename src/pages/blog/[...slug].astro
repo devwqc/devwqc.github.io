@@ -1,5 +1,4 @@
 ---
-import Header from '@/components/Header.astro';
 import MarkDown from '@/components/Markdown.astro';
 import PageLayout from '@/layouts/PageLayout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
@@ -20,7 +19,6 @@ const { Content } = await post.render();
 ---
 
 <PageLayout title={post.data.title}>
-  <Header />
   <article>
     <header>
       <h1>{post.data.title}</h1>
