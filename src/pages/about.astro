@@ -3,5 +3,24 @@ import PageLayout from '@/layouts/PageLayout.astro';
 ---
 
 <PageLayout title="About">
-  <h1>About</h1>
+  <article class="flex flex-col gap-10">
+    <header>
+      <h1 class="text-3xl font-bold py-3">정봉찬</h1>
+      <p class="text-xl">프론트엔드 개발자</p>
+    </header>
+    <section>
+      <h2 class="text-2xl py-2">교육</h2>
+      <ul>
+        <li>
+          <p>
+            코드잇 스프린트 (프론트엔드 부트캠프) <span class="text-slate-500">
+              <time datetime="2023.12">2023.12</time> ~ <time datetime="2024.06"
+                >2024.06</time
+              >
+            </span>
+          </p>
+        </li>
+      </ul>
+    </section>
+  </article>
 </PageLayout>
