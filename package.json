@@ -2,6 +2,22 @@
   "name": "devwqc-blog",
   "type": "module",
   "version": "0.0.1",
+  "description": "devwqc-blog",
+  "author": "devwqc <devwqc@gmail.com>",
+  "keywords": [
+    "astro",
+    "blog"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devwqc/devwqc.github.io"
+  },
+  "homepage": "https://devwqc.github.io/",
+  "bugs": {
+    "url": "https://github.com/devwqc/devwqc.github.io/issues",
+    "email": "devwqc@gmail.com"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
