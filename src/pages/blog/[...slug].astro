@@ -1,7 +1,7 @@
 ---
 import FormattedDate from '@/components/FormattedDate.astro';
+import Giscus from '@/components/Giscus.astro';
 import MarkDown from '@/components/Markdown.astro';
-import PostComments from '@/components/PostComments.astro';
 import PageLayout from '@/layouts/PageLayout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
@@ -47,6 +47,6 @@ const { Content } = await post.render();
       <p>방문해 주셔서 감사합니다.</p>
       <p>오탈자, 잘못된 정보에 대해 말씀해 주시면 감사히 받겠습니다.</p>
     </footer>
-    <PostComments />
+    <Giscus />
   </article>
 </PageLayout>
