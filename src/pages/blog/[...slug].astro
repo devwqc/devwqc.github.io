@@ -26,7 +26,7 @@ const { Content } = await post.render();
       <p class="text-gray-500">
         <span>
           작성일:
-          <FormattedDate datetime={post.data.publishedDate} />
+          <FormattedDate datetime={post.data.pubDate} />
         </span>
         {
           post.data.updatedDate && (
