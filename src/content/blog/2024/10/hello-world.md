@@ -1,7 +1,7 @@
 ---
 title: 'Hello World!'
 description: 'Hello World!'
-publishedDate: '2024-10-01'
+pubDate: '2024-10-01'
 ---
 
 ## Hello World!를 작성하는 시점의 나
