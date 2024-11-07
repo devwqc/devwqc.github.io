@@ -25,6 +25,12 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "engines": {
+    "node": ">=20.11.1",
+    "pnpm": ">=9.12.2",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm"
+  },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
     "@astrojs/rss": "4.0.7",
