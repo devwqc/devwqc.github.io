@@ -25,6 +25,7 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "packageManager": "pnpm@9.12.2",
   "engines": {
     "node": ">=20.11.1",
     "pnpm": ">=9.12.2",
