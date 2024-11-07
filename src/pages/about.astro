@@ -1,4 +1,5 @@
 ---
+import TechList from '@/components/TechList.astro';
 import PageLayout from '@/layouts/PageLayout.astro';
 ---
 
@@ -9,7 +10,97 @@ import PageLayout from '@/layouts/PageLayout.astro';
       <p class="text-xl">프론트엔드 개발자</p>
     </header>
     <section>
-      <h2 class="text-2xl py-2">교육</h2>
+      <h2 class="text-2xl font-bold py-2">경력</h2>
+      <ul>
+        <li>
+          <p class="text-xl font-bold">메멘토에이아이</p>
+          <p>
+            인턴 <span class="text-slate-500">
+              <time datetime="2024.10">2024.10</time> ~ <time datetime="2024.11"
+                >2024.11</time
+              > (1개월)
+            </span>
+          </p>
+          <div class="py-2">
+            <p class="text-lg font-bold">
+              피부과 시술 예약 및 뷰티 컨설팅 시스템
+            </p>
+            <ul
+              class="[&>:not(:first-child)]:before:content-['-'] [&>:not(:first-child)]:before:px-2"
+            >
+              <li class="py-2">
+                <TechList
+                  labels={[
+                    'React Navite',
+                    'TypeScript',
+                    'TanStack Query',
+                    'Recoil',
+                    'styled-components',
+                  ]}
+                />
+              </li>
+              <li>동의서 다시 받기 이메일 발송</li>
+              <li>서명 미완료 동의서 안내 토스트</li>
+              <li>다국어 지원</li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <p class="text-lg font-bold">
+              피부과 관리 시스템, 백 오피스 시스템
+            </p>
+            <ul
+              class="[&>:not(:first-child)]:before:content-['-'] [&>:not(:first-child)]:before:px-2"
+            >
+              <li class="py-2">
+                <TechList
+                  labels={[
+                    'React',
+                    'TypeScript',
+                    'Turborepo',
+                    'React Router',
+                    'TanStack Query',
+                    'Zustand',
+                    'Tailwind CSS',
+                  ]}
+                />
+              </li>
+              <li>내 정보 페이지, 비밀번호 변경</li>
+              <li>관리자 계정 생성 후 최초 로그인 시 비밀번호 변경</li>
+              <li>다국어 지원</li>
+              <li>기타 QA 진행 및 해결</li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <p class="text-lg font-bold">제품 발주 시스템</p>
+            <ul
+              class="[&>:not(:first-child)]:before:content-['-'] [&>:not(:first-child)]:before:px-2"
+            >
+              <li class="py-2">
+                <TechList
+                  labels={[
+                    'React',
+                    'TypeScript',
+                    'Vite',
+                    'React Router',
+                    'TanStack Query',
+                    'Tailwind CSS',
+                    'shadcn/ui',
+                  ]}
+                />
+              </li>
+              <li>인증, 인가</li>
+              <li>
+                routes 구성, 레이아웃 레벨에서 ErrorBoundary, Suspense 관리
+              </li>
+              <li>입·출고 관리 페이지</li>
+              <li>배송 관리 페이지</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2 class="text-2xl font-bold py-2">교육</h2>
       <ul>
         <li>
           <p>
