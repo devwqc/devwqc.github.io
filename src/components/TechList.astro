@@ -1,0 +1,19 @@
+---
+import Tech from './Tech.astro';
+
+type Props = {
+  labels: string[];
+};
+
+const { labels } = Astro.props;
+---
+
+<ul class="flex flex-wrap items-center gap-2">
+  {
+    labels.map((label) => (
+      <li>
+        <Tech label={label} />
+      </li>
+    ))
+  }
+</ul>
