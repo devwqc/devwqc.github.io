@@ -3,12 +3,19 @@ name: Build Test
 on:
   pull_request:
     branches: [main, develop]
+    types: [opened, synchronize, reopened, edited]
   workflow_dispatch:
 
 jobs:
   build-test:
     runs-on: ubuntu-latest
     steps:
+      - name: Check source branch for main PR
+        if: github.base_ref == 'main' && github.head_ref != 'develop'
+        run: |
+          echo "PRs to main branch are only allowed from develop branch"
+          exit 1
+
       - name: Checkout your repository using git
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
