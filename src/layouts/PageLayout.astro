@@ -22,8 +22,8 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <slot name="head" />
   </head>
-  <body class="max-w-[48rem] mx-auto my-0 px-5">
-    <div class="min-h-screen flex flex-col justify-between">
+  <body class="mx-auto my-0 max-w-[48rem] px-5">
+    <div class="flex min-h-screen flex-col justify-between">
       <div>
         <Header />
         <slot />
