@@ -12,7 +12,7 @@ import HamburgerSvg from './HamburgerSvg.astro';
   {
     menu.map((item) => (
       <li>
-        <HeaderLink href={item.path} class="block">
+        <HeaderLink href={item.path} incldues={item.includes} class="block">
           {item.label}
         </HeaderLink>
       </li>
