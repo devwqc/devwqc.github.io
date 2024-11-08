@@ -16,10 +16,10 @@ const posts = (await getCollection('blog')).sort(
           <article>
             <a
               href={`/blog/${post.slug}/`}
-              class="hover:text-emerald-600 flex flex-col gap-1"
+              class="flex flex-col gap-1 hover:text-emerald-600"
             >
               <h2 class="text-3xl font-bold">{post.data.title}</h2>
-              <p class="text-gray-500 text-sm">
+              <p class="text-sm text-gray-500">
                 <span>
                   작성일:
                   <FormattedDate datetime={post.data.pubDate} />
