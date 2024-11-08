@@ -7,7 +7,9 @@ import { menu } from '@/constants/menu';
   {
     menu.map((item) => (
       <li>
-        <HeaderLink href={item.path}>{item.label}</HeaderLink>
+        <HeaderLink href={item.path} incldues={item.includes}>
+          {item.label}
+        </HeaderLink>
       </li>
     ))
   }
