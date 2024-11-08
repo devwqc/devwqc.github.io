@@ -3,6 +3,7 @@ name: Build Test
 on:
   pull_request:
     branches: [main, develop]
+    types: [opened, synchronize, reopened, edited]
   workflow_dispatch:
 
 jobs:
