@@ -18,7 +18,7 @@ import HamburgerSvg from './HamburgerSvg.astro';
       </li>
     ))
   }
-  <button id="closeMenuBtn" type="button" class="absolute top-10 right-5">
+  <button id="closeMenuBtn" type="button" class="absolute right-5 top-10">
     <CloseSvg class="size-7" />
   </button>
 </ul>
@@ -35,6 +35,6 @@ import HamburgerSvg from './HamburgerSvg.astro';
 
 <style>
   .expanded {
-    @apply bg-white fixed inset-0 flex flex-col gap-5;
+    @apply fixed inset-0 flex flex-col gap-5 bg-white;
   }
 </style>
